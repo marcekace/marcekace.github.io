@@ -1,0 +1,463 @@
+/*
+Copyright (C) 2024 KaceM
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+contacto@kacem.pw
+*/
+
+:root {
+    --dark: #000000;
+    --light: #F5F7FF;
+    --blue: #4776F4;
+    --blue-55: #4776F47D;
+}
+
+* {
+    font-family: "Roboto Serif", serif;
+    margin: 0;
+    padding: 0;
+}
+
+paragraph-bilingue {
+    display: block;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 92px;
+    backdrop-filter: blur(1px);
+    z-index: 3;
+}
+
+body {
+    min-height: 100vh;
+    background: #000000;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: calc(100% - 15px);
+    padding: 0 15px;
+    color: #FFFFFF;
+}
+
+nav a {
+  color: var(--light);
+  text-decoration: none;
+  margin: 0 10px;
+  transition: .5s ease-in-out;
+}
+
+nav button {
+  font-size: 16px;
+  color: var(--light);
+  background: transparent;
+  border: transparent;
+  margin: 0 10px;
+  transition: .5s ease-in-out;
+}
+
+nav img {
+    opacity: .5;
+    margin: 20px 0;
+    transition: .5s ease-in-out;
+}
+
+nav img:hover {
+    opacity: 1;
+}
+
+nav a:first-child {
+    margin-right:auto;
+}
+
+#id_menu {
+    display: none;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    max-width: 0px;
+    padding: 0;
+    height: 100%;
+    z-index: 4;
+    overflow: hidden;
+    backdrop-filter: blur(3px);
+}
+
+#sidebar ul {
+    width: 73%;
+    align-self: center;
+    margin-top: 20px;
+    list-style: none;
+}
+
+#sidebar ul li {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+#sidebar ul li paragraph-bilingue {
+    display: inline;
+}
+
+#sidebar-btn {
+    align-self: baseline;
+    font-size: 22px;
+    background: transparent;
+    border: transparent;
+    padding: 5px 0;
+    margin-left: 13.5%;
+    color: var(--light);
+}
+
+footer {
+    text-align: center;
+    color: var(--light);
+    width: 100%;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+footer a {
+  font-size: 24px;
+  color: var(--light);
+  text-decoration: none;
+  transition: .5s ease-in-out;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.color-light {
+  color: var(--light);
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.mtb-s {
+    margin: 15px 0;
+}
+
+nav a:hover,
+nav button:hover,
+footer a:hover {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+#footer + a {
+  font-size: initial;
+}
+
+#experience {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    padding: 0 25px;
+    margin-top: 25px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.btn-transparent {
+    font-size: 32px;
+    color: var(--light);
+    background: transparent;
+    border: transparent;
+    height: fit-content;
+    transition: .5s ease-in-out;
+}
+
+.btn-transparent:hover {
+    color: var(--blue);
+}
+
+#wrapper {
+    display: flex;
+    min-width: -webkit-fill-available;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+
+    &:hover .wrapper {
+        animation-play-state: paused;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex: 0 0 100%;
+    will-change: transform;
+}
+
+.filter {
+    position: absolute;
+    height: 500px;
+    width: 10%;
+    max-width: 100px;
+    z-index: 2;
+}
+
+.filter-left {
+    left: 24px;
+    background: linear-gradient(to right, black, transparent);
+}
+
+.filter-right {
+    right: 24px;
+    background: linear-gradient(to left, black, transparent);
+}
+
+.title-container {
+    margin-top: 75px;
+    padding: 25px;
+}
+
+.title-container h1 {
+    margin: 10px 0;
+}
+
+.title-container h2 {
+    margin-top: 30px;
+}
+
+custom-card {
+    width: calc(1440px / 4);
+    min-width: 25%;
+    padding: 0 5px;
+    filter: brightness(1);
+    box-sizing: border-box;
+    transition: .5s ease-in-out;
+}
+
+custom-card:hover {
+    padding: 0;
+}
+
+custom-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+custom-card img:nth-child(n + 2) {
+    position: relative;
+    left: 0;
+    opacity: 1;
+}
+
+custom-card > div {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    color: var(--light);
+    padding: 20px;
+    text-align: justify;
+    backdrop-filter: brightness(1);
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+custom-card > div:hover {
+    backdrop-filter: brightness(.55);
+    opacity: 1;
+}
+
+custom-card > div div {
+    text-align: right;
+}
+
+custom-card div p {
+    margin-bottom: 20px;
+}
+
+custom-card div a {
+    font-size: 24px;
+    color: var(--light);
+    align-self: flex-end;
+    transition: .5s ease-in-out;
+}
+
+custom-card div button {
+    font-size: 24px;
+    color: var(--light);
+    margin-right: 10px;
+    background: transparent;
+    border: transparent;
+    transition: .5s ease-in-out;
+}
+
+custom-card div button:hover {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+custom-card div a:hover {
+    color: var(--blue);
+}
+
+.col-sm {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+#contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    margin: 50px 0;
+}
+
+#contact-form form {
+    min-height: 250px;
+    padding: 50px;
+    background-color: #222222;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    box-sizing: border-box;
+}
+
+.form-input {
+    height: 50px;
+    width: 300px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--blue-55);
+    background: transparent;
+    color: var(--light);
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+.area-input {
+    padding: 10px;
+    background: transparent;
+    color: var(--light);
+    border: 1px solid var(--blue-55);
+    border-radius: 10px;
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 150px;
+    box-sizing: border-box;
+}
+
+.form-input:focus,
+.area-input:focus {
+    border: 1px solid var(--blue);
+    outline: 0;
+}
+
+form input[name="name"] {
+    margin: 25px 0 0 0 !important;
+}
+
+#contact-form p {
+    font-size: 80%;
+    color: var(--light);
+    text-align: center;
+    margin: 20px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn-primary {
+    padding: 15px;
+    color: var(--light);
+    background: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0;
+    opacity: .8;
+    transition: .5s ease-in-out;
+}
+
+.btn-primary:hover {
+    opacity: 1;
+}
+
+.grecaptcha-badge {
+    bottom: 75px !important;
+    z-index: 3;
+}
+
+
+@media only screen and (max-width: 768px) {
+    custom-card {
+        width: calc(768px / 2);
+    }
+}
+
+
+@media only screen and (max-width: 425px) {
+    .col-sm {
+        width: 100%;
+    }
+
+    nav img {
+        width: 150px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #id_menu {
+        display: block;
+    }
+
+    .form-input {
+        width: 100%;
+    }
+
+    .area-input {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    custom-card {
+        width: 280px;
+    }
+}

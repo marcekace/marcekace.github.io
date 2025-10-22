@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- Copyright (C) 2024 KaceM
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+contacto@kacem.pw -->
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="KaceM" content="Servicios Informáticos">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    <link rel="stylesheet" href="./assets/css/bootstrap-icons.css">
+    <script src="./assets/js/core.js"></script>
+    <script src="./assets/js/classes/card.js"></script>
+    <script src="./assets/js/classes/experience.js"></script>
+    <script src="./assets/js/classes/paragraph_bilingue.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" title="Inicio"><img src="./assets/img/logo.png" alt="Logo" height="auto" width="200"></a>
+            <button class="hidden" type="button" title="Lenguaje">ES</button>
+            <a class="hidden" href="#experience" title="Experiencia"><paragraph-bilingue es="EXPERIENCIA" en="EXPERIENCE"></paragraph-bilingue></a>
+            <a class="hidden" href="#contact-form" title="Contacto"><paragraph-bilingue es="CONTACTO" en="CONTACT"></paragraph-bilingue></a>
+            <button type="button" id="id_menu" class="btn-transparent bi bi-list" title="Menu" onclick="toggleSideBar()"></button>
+        </nav>
+    </header>
+    <nav id="sidebar">
+        <button type="button" id="sidebar-btn" class="bi bi-arrow-right" title="Cerrar"></button>
+        <ul>
+            <li><a class="bi bi-house" href="/" title="Inicio"> <paragraph-bilingue es="INICIO" en="HOME"></paragraph-bilingue></a></li>
+            <li><a class="bi bi-info-circle" href="#experience" title="Experiencia"> <paragraph-bilingue es="EXPERIENCIA" en="EXPERIENCE"></paragraph-bilingue></a></li>
+            <li><a class="bi bi-send" href="#contact-form" title="Contacto"> <paragraph-bilingue es="CONTACTO" en="CONTACT"></paragraph-bilingue></a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="title-container">
+            <h1 class="color-light"><paragraph-bilingue es="SERVICIOS INFORMATICOS" en="IT SERVICES"></paragraph-bilingue></h1>
+            <p class="color-light"><paragraph-bilingue es="DESARROLLAMOS SOFTWARE A MEDIDA PARA TU NEGOCIO O USO PERSONAL" en="WE DEVELOP CUSTOM SOFTWARE FOR YOUR BUSINESS OR PERSONAL USE"></paragraph-bilingue></p>
+            <h2 class="color-light"><paragraph-bilingue es="EXPERIENCIA" en="EXPERIENCE"></paragraph-bilingue></h2>
+        </div>
+        <custom-experience id="experience">
+            <div class="filter filter-left"></div>
+            <div id="wrapper">
+                <div class="wrapper"></div>
+                <div aria-hidden class="wrapper"></div>
+            </div>
+            <div class="filter filter-right"></div>
+        </custom-experience>
+        <div id="contact-form">
+            <form class="col-sm" name="contact-form">
+                <h2 class="color-light"><paragraph-bilingue es="CONTACTANOS" en="CONTACT US"></paragraph-bilingue></h2>
+                <input class="form-input" type="text" name="name" placeholder="Escribe tu nombre aqui" maxlength="120" required>
+                <input class="form-input" type="email" name="email" placeholder="Escribe tu mail aqui" required>
+                <textarea name="subject" cols="40" rows="3" class="area-input" maxlength="2000" placeholder="Cuentanos es en podemos ayudarte" required></textarea>
+                <p><paragraph-bilingue es="Nunca compartiremos tu información. Solo la usaremos para responderte." en="We'll never share your information. We'll only use it to respond to you."></paragraph-bilingue></p>
+                <button type="submit" data-sitekey="6LcRqX0rAAAAAClPjiE_AzSEo87CV1x65Zziw7Tp" class="btn btn-primary g-recaptcha" title="Enviar" data-callback="handleForm" data-action="CONTACT"><paragraph-bilingue es="ENVIAR" en="SEND"></paragraph-bilingue></button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="text-end">
+            <a class="bi bi-at" href="mailto:contacto@kacem.pw" title="Email"></a>
+            <a class="bi bi-git" href="https://github.com/marcekace" title="Git"></a>
+        </div>
+        <p><span id="footer"></span><a href="#"> KaceM</a></p>
+    </footer>
+</body>
+</html>
