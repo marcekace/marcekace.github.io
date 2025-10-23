@@ -40,7 +40,7 @@ function createElementS(props, type) {
 }
 
 function handleForm(token) {
-    fetch("https://kacem.alwaysdata.net//contact", {
+    fetch("https://kacem.alwaysdata.net/contact", {
         method: "POST",
         body: new FormData(document.forms["contact-form"])
     })
