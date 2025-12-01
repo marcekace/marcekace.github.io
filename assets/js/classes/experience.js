@@ -44,7 +44,7 @@ window.customElements.define("custom-experience", class extends HTMLElement {
                 }
             })
             .finally(() => {
-                this.animate();
+                setTimeout(this.animate(), 5000);
 
                 document.getElementById("wrapper").addEventListener("mouseenter", () => {
                     for (let obj of this.animation) {
